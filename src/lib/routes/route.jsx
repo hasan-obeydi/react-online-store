@@ -1,0 +1,49 @@
+import { createBrowserRouter } from "react-router";
+
+import AppLayout from "../../components/layouts/AppLayout";
+import Home from "../../pages/Home/Home";
+import Products from "../../pages/Products/Products";
+import Users from "../../pages/Users/Users";
+import AboutUs from "../../pages/AboutUs/AboutUs";
+import ContactUs from "../../pages/ContactUs/ContactUs";
+import Blog from "../../pages/Blog/Blog";
+import Cart from "../../pages/Cart/Cart";
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <AppLayout />,
+    children: [
+      {
+        index: true,
+        element: <Home />,
+      },
+      {
+        path: "about-us",
+        element: <AboutUs />,
+      },
+      {
+        path: "contact-us",
+        element: <ContactUs />,
+      },
+      {
+        path: "cart",
+        element: <Cart />,
+      },
+      {
+        path: "products/:productId",
+        element: <Products />,
+      },
+      {
+        path: "users/:userId",
+        element: <Users />,
+      },
+      {
+        path: "blog/:blogId",
+        element: <Blog />,
+      },
+    ],
+  },
+]);
+
+export default router;
