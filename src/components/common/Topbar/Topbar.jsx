@@ -10,7 +10,7 @@ const Topbar = () => {
   const title = "آنلاین شاپ";
   return (
     <>
-      <div className="py-3 dark:bg-primary-dark primary-border-b dark:border-none">
+      <div className="p-3 dark:bg-primary-dark primary-border-b dark:border-none">
         <div className="flex-between container">
           <MenuIcon setIsMenuOpen={setIsMenuOpen} />
           <Title title={title} />

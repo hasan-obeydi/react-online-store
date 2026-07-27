@@ -20,12 +20,12 @@ const HeroSection = () => {
         >
           <SwiperSlide>
             <Link to="/">
-              <img className="object-cover h-full" src="/assets/banner1.png" />
+              <img className="object-cover size-full" src="/assets/banner1.png" />
             </Link>
           </SwiperSlide>
           <SwiperSlide>
             <Link to="/">
-              <img className="object-cover h-full" src="/assets/banner2.png" />
+              <img className="object-cover size-full" src="/assets/banner2.png" />
             </Link>
           </SwiperSlide>
         </Swiper>

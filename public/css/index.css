@@ -18,7 +18,7 @@ body {
 }
 
 @utility container {
-  @apply w-[90%] mx-auto;
+  @apply w-[90%] md:w-full mx-auto;
 }
 
 @utility flex-center {
