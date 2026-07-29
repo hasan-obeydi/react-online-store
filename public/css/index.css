@@ -64,3 +64,11 @@ body {
 .button {
   @apply primary-border py-2 px-4 rounded-lg cursor-pointer text-white hover:opacity-75 duration-200;
 }
+
+.footer-title {
+  @apply text-xl font-bold
+}
+
+.footer-text {
+  @apply text-sm mt-3 text-gray-300
+}
