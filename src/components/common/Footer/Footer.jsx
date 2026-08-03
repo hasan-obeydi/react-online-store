@@ -9,18 +9,18 @@ import { MdOutlineEmail } from "react-icons/md";
 const Footer = () => {
   return (
     <footer className="bg-slate-950 mt-10 text-white primary-border-t">
-      <div className="grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 md:px-6 py-10 container">
+      <div className="grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6 py-10 container">
         <div>
           <h3 className="footer-title">فروشگاه آنلاین</h3>
-          <p className="footer-text">
+          <p className="footer-text leading-6">
             لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
             استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در
             ستون و سطرآنچنان که لازم است.
           </p>
           <div className="flex-itc gap-3 mt-4">
-            <Icon icon={<FaWhatsapp />} />
-            <Icon icon={<FaTelegram />} />
-            <Icon icon={<FaInstagram />} />
+            <Icon icon={<FaWhatsapp />} color="green" />
+            <Icon icon={<FaTelegram />} color="blue" />
+            <Icon icon={<FaInstagram />} color="pink" />
           </div>
         </div>
         <ul>
@@ -81,7 +81,7 @@ const Footer = () => {
           </li>
         </ul>
       </div>
-      <div className="primary-border-t bg-black py-3 text-center text-xs">
+      <div className="border-t border-gray-800 bg-black py-3 text-center text-xs">
         ساخته شده توسط محمد حسن عبیدی پور
       </div>
     </footer>

@@ -10,7 +10,7 @@ import { Link } from "react-router";
 const HeroSection = () => {
   return (
     <>
-      <section className="h-30 md:h-60">
+      <section className="h-35 sm:h-55 md:h-65 lg:h-75">
         <Swiper
           pagination
           loop

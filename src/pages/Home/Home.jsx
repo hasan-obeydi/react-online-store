@@ -1,7 +1,7 @@
-import BestSelling from "../../template/Home/BestSelling/BestSelling";
-import HeroSection from "../../template/Home/HeroSection/HeroSection";
-import LastProducts from "../../template/Home/LastProducts/LastProducts";
-import SEO from "../../template/Home/SEO-Section/SEO";
+import BestSelling from "../../components/template/Home/BestSelling/BestSelling";
+import HeroSection from "../../components/template/Home/HeroSection/HeroSection";
+import LastProducts from "../../components/template/Home/LastProducts/LastProducts";
+import SEO from "../../components/template/Home/SEO-Section/SEO";
 
 const Home = () => {
   return (

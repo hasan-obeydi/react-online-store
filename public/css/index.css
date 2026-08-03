@@ -18,7 +18,7 @@ body {
 }
 
 @utility container {
-  @apply w-[90%] md:w-full mx-auto;
+  @apply w-[90%] md:px-3 mx-auto  ;
 }
 
 @utility flex-center {
@@ -70,5 +70,8 @@ body {
 }
 
 .footer-text {
-  @apply text-sm mt-3 text-gray-300
+  @apply text-sm mt-3 text-gray-300 
+}
+.box-style {
+  @apply border primary-border rounded-lg p-4
 }

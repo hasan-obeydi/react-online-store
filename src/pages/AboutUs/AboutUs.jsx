@@ -10,7 +10,7 @@ const AboutUs = () => {
       <div>
         <SectionTitle title="ما کی هستیم ؟" description={LOREM_TEXT} />
       </div>
-      <div className="grid grid-cols-2 mt-10">
+      <div className="grid grid-cols-1 md:grid-cols-2  mt-10">
         <div>
           <Accordion options={accordian} />
         </div>
@@ -20,9 +20,12 @@ const AboutUs = () => {
       </div>
       <div className="mt-10">
         <SectionTitle title="پاسخ خود را پیدا نکردید؟" />
-        <p className="text-sm">
-          شما میتوانید <Link to='/contact-us' className="text-blue-500 underline">از طریق این صفحه</Link> با ما تماس بگیرید و سوال
-          خود را از تیم فنی بپرسید !
+        <p className="">
+          شما میتوانید{" "}
+          <Link to="/contact-us" className="text-blue-500 underline">
+            از طریق این صفحه
+          </Link>{" "}
+          با ما تماس بگیرید و سوال خود را از تیم فنی بپرسید !
         </p>
       </div>
     </main>

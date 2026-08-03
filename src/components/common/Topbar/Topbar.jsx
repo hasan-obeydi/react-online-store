@@ -7,11 +7,11 @@ import Menu from "../Menu/Menu";
 
 const Topbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const title = "آنلاین شاپ";
+  const title = "فروشگاه اینترنتی";
   return (
     <>
       <div className="p-3 dark:bg-primary-dark primary-border-b dark:border-none">
-        <div className="flex-between container">
+        <div className="flex-between px-1">
           <MenuIcon setIsMenuOpen={setIsMenuOpen} />
           <Title title={title} />
           <NavLinks />

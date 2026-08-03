@@ -1,7 +1,6 @@
-
 const SEO = () => {
   return (
-    <div className="container md:px-3 text-sm text-gray-500 mt-10">
+    <div className="container md:px-3 text-sm md:text-base   text-gray-500 mt-10">
       لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از
       طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان
       که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف

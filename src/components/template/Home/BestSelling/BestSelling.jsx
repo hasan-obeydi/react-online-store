@@ -1,6 +1,6 @@
-import ProductCard from "../../../components/common/ProductCard/ProductCard";
-import SectionTitle from "../../../components/common/SectionTitle/SectionTitle";
-import products from "../../../lib/products";
+import ProductCard from "../../../common/ProductCard/ProductCard";
+import SectionTitle from "../../../common/SectionTitle/SectionTitle";
+import products from "../../../../lib/products";
 
 const BestSelling = () => {
   return (

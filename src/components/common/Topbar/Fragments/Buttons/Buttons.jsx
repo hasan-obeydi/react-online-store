@@ -4,7 +4,7 @@ import LoginButton from "./Fragments/LoginButton";
 
 const Buttons = () => {
   return (
-    <div className="flex-itc gap-3">
+    <div className="flex-itc gap-2">
       <ThemeIcon />
       <CartButton />
       <LoginButton />
