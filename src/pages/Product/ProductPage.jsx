@@ -1,14 +1,18 @@
+import BottomBar from "../../components/template/Product/BottomBar/BottomBar";
 import HeroSection from "../../components/template/Product/HeroSection/HeroSection";
 import Sidebar from "../../components/template/Product/SideBar/Sidebar";
 
 const ProductPage = () => {
   return (
-    <main className="container mt-10 flex">
-      <div>
-        <HeroSection />
-      </div>
-      <Sidebar />
-    </main>
+    <>
+      <main className="w-[95%] mx-auto mt-10 grid grid-cols-8 gap-4">
+        <section className="col-span-8 lg:col-span-6 *:dark:bg-primary-dark">
+          <HeroSection />
+        </section>
+        <Sidebar />
+      </main>
+      <BottomBar />
+    </>
   );
 };
 

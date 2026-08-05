@@ -4,7 +4,7 @@ const ProductCard = (product) => {
   return (
     <Link
       to="/product"
-      className="primary-border rounded-lg overflow-hidden px-3 pt-1 pb-3 hover:shadow-lg dark:bg-primary-dark duration-200 hover:scale-103"
+      className="box-style overflow-hidden hover:shadow-lg dark:bg-primary-dark duration-200 hover:scale-103"
     >
       <div className="w-30 mx-auto">
         <img

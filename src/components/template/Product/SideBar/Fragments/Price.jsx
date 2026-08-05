@@ -1,6 +1,6 @@
 const Price = () => {
   return (
-    <div className="flex mt-6 gap-1 justify-end">
+    <div className="flex gap-1 justify-end">
       <span className="font-bold">
         {Number(1230000).toLocaleString("fa-IR")}
       </span>
