@@ -1,6 +1,7 @@
 import BottomBar from "../../components/template/Product/BottomBar/BottomBar";
 import Description from "../../components/template/Product/Description/Description";
 import HeroSection from "../../components/template/Product/HeroSection/HeroSection";
+import RelatedProducts from "../../components/template/Product/RelatedProducts/RelatedProducts";
 import Sidebar from "../../components/template/Product/SideBar/Sidebar";
 
 const ProductPage = () => {
@@ -10,6 +11,7 @@ const ProductPage = () => {
         <section className="col-span-8 lg:col-span-6 *:dark:bg-primary-dark">
           <HeroSection />
           <Description />
+          <RelatedProducts />
         </section>
         <Sidebar />
       </main>

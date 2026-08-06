@@ -1,10 +1,9 @@
 import { Link } from "react-router";
 
-const Product = (product) => {
+const ProductCard = (product) => {
   return (
     <Link
       to="/product"
-      className="box-style overflow-hidden hover:shadow-lg dark:bg-primary-dark duration-200 hover:scale-103"
     >
       <div className="w-30 mx-auto">
         <img
@@ -26,4 +25,4 @@ const Product = (product) => {
   );
 };
 
-export default Product;
+export default ProductCard;
