@@ -18,7 +18,7 @@ body {
 }
 
 @utility container {
-  @apply w-[90%] md:px-3 mx-auto  ;
+  @apply w-[90%] md:px-3 mx-auto;
 }
 
 @utility flex-center {
@@ -57,7 +57,7 @@ body {
   @apply hover:bg-gray-200 dark:hover:bg-gray-700 p-2 rounded-lg cursor-pointer transition duration-200;
 }
 
-.bg-gradient {
+@utility bg-gradient {
   @apply bg-linear-to-r from-sky-500 to-indigo-500;
 }
 
@@ -66,15 +66,65 @@ body {
 }
 
 .footer-title {
-  @apply text-xl font-bold
+  @apply text-xl font-bold;
 }
 
 .footer-text {
-  @apply text-sm mt-3 text-gray-300 
+  @apply text-sm mt-3 text-gray-300;
 }
 .box-style {
-  @apply border primary-border rounded-lg p-4
+  @apply border primary-border rounded-lg p-4;
 }
 .text-style {
-  @apply text-gray-500 dark:text-gray-400
+  @apply text-gray-500 dark:text-gray-400;
+}
+.icon-style {
+  @apply primary-border rounded-lg p-2 hover:bg-gray-200 dark:hover:bg-gray-700 cursor-pointer;
+}
+.share-text-hover:hover::after {
+  position: absolute;
+  content: "اشتراک گذاری";
+  top: -38px;
+  color: #fff;
+  padding: 4px;
+  width: 100px;
+  left: 50%;
+  text-align: center;
+  background-color: #263238;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  border-radius: 10px;
+  font-size: 14px;
+  -webkit-transform: translate(-50%, 0);
+  -moz-transform: translate(-50%, 0);
+  -ms-transform: translate(-50%, 0);
+  -o-transform: translate(-50%, 0);
+  transform: translate(-50%, 0);
+}
+.comments-text-hover:hover::after {
+  position: absolute;
+  content: "رفتن به نظرات";
+  top: -38px;
+  color: #fff;
+  padding: 4px;
+  width: 100px;
+  left: 50%;
+  text-align: center;
+  background-color: #263238;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  border-radius: 10px;
+  font-size: 14px;
+  -webkit-transform: translate(-50%, 0);
+  -moz-transform: translate(-50%, 0);
+  -ms-transform: translate(-50%, 0);
+  -o-transform: translate(-50%, 0);
+  transform: translate(-50%, 0);
+}
+.primary-button {
+  @apply bg-gradient text-white gap-2 rounded-lg p-2 w-fit cursor-pointer hover:opacity-80 duration-200;
 }
