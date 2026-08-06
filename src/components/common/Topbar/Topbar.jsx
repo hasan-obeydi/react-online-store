@@ -10,7 +10,7 @@ const Topbar = () => {
   const title = "فروشگاه اینترنتی";
   return (
     <>
-      <div className="p-3 dark:bg-primary-dark primary-border-b dark:border-none">
+      <div className="fixed top-0 w-full md:static z-9 p-3 dark:bg-primary-dark primary-border-b dark:border-none">
         <div className="flex-between px-1">
           <MenuIcon setIsMenuOpen={setIsMenuOpen} />
           <Title title={title} />
