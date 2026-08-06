@@ -1,4 +1,5 @@
 import BottomBar from "../../components/template/Product/BottomBar/BottomBar";
+import Comments from "../../components/template/Product/Comments/Comments";
 import Description from "../../components/template/Product/Description/Description";
 import HeroSection from "../../components/template/Product/HeroSection/HeroSection";
 import RelatedProducts from "../../components/template/Product/RelatedProducts/RelatedProducts";
@@ -12,6 +13,7 @@ const ProductPage = () => {
           <HeroSection />
           <Description />
           <RelatedProducts />
+          <Comments />
         </section>
         <Sidebar />
       </main>

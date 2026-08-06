@@ -7,14 +7,34 @@ import "swiper/css/pagination";
 
 // import required modules
 import Product from "./Product";
+import { Autoplay } from "swiper/modules";
 
 const SwiperProducts = () => {
   return (
     <>
       <Swiper
         loop={true}
-        slidesPerView={3}
+        slidesPerView={1}
         spaceBetween={30}
+        breakpoints={{
+          420: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+          },
+          640: {
+            slidesPerView: 3,
+            spaceBetween: 40,
+          },
+          1200: {
+            slidesPerView:4,
+            spaceBetween: 30,
+          },
+        }}
+        autoplay={{
+          delay: 2500,
+          disableOnInteraction: false,
+        }}
+        modules={[Autoplay]}
         className="mySwiper mt-6"
       >
         {products.map((product) => (

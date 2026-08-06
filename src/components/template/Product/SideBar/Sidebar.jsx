@@ -5,7 +5,7 @@ import Consulting from "./Fragments/Consulting";
 
 const Sidebar = () => {
   return (
-    <div className="sticky col-span-2 primary-border hidden lg:block box-style bg-white h-fit dark:bg-primary-dark space-y-4">
+    <div className="sticky max-h-max col-span-2 primary-border hidden lg:block box-style bg-white dark:bg-primary-dark space-y-4 top-5">
       <MiniProduct />
       <Price />
       <AddToCart />
