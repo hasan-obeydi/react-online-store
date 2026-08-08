@@ -62,7 +62,7 @@ body {
 }
 
 .button {
-  @apply primary-border py-2 px-4 rounded-lg cursor-pointer text-white hover:opacity-75 duration-200;
+  @apply primary-border py-2 px-4 rounded-lg cursor-pointer dark:text-white hover:opacity-75 duration-200;
 }
 
 .footer-title {
@@ -73,7 +73,7 @@ body {
   @apply text-sm mt-3 text-gray-300;
 }
 .box-style {
-  @apply border primary-border rounded-3xl p-4;
+  @apply border primary-border rounded-xl p-4;
 }
 .text-style {
   @apply text-gray-500 dark:text-gray-400;
