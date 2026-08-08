@@ -7,13 +7,13 @@ const AccordionItem = (option) => {
     <div>
       <div
         onClick={setIsAccordian}
-        className="flex-between p-6 sm:p-8 hover:bg-blue-500/15 dark:hover:bg-blue-900/50 cursor-pointer duration-200"
+        className="flex-between p-7! sm:p-8 hover:bg-blue-500/15 dark:hover:bg-blue-900/50 cursor-pointer duration-200"
       >
         <h3>{option.label}</h3>
         <FaAngleLeft className={isAccordianOpen && "-rotate-90 duration-150"} />
       </div>
       {isAccordianOpen && (
-        <p className="leading-6 p-4 text-gray-500 line">
+        <p className="leading-6 p-4! text-gray-500 line">
           {option.content}
         </p>
       )}

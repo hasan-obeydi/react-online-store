@@ -12,7 +12,7 @@ const CommentForm = () => {
         />
       </div>
       <div>
-        <label className="" htmlFor="email">
+        <label htmlFor="email">
           پست الکترونیکی :
         </label>
         <input
