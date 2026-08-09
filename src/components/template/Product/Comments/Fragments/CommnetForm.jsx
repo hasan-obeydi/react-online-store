@@ -1,28 +1,22 @@
+import InputField from "../../../../common/Input/InputField";
+
 const CommentForm = () => {
   return (
     <form className="box-style flex-2 bg-gray-100 dark:bg-gray-800 space-y-3 h-fit sticky top-5">
-      <div>
-        <label htmlFor="name">نام شما : </label>
-        <input
-          className="input-style mt-2"
-          id="name"
-          type="text"
-          placeholder="مثال : حسن عبیدی"
-          required
-        />
-      </div>
-      <div>
-        <label htmlFor="email">
-          پست الکترونیکی :
-        </label>
-        <input
-          className="input-style mt-2"
-          id="email"
-          type="email"
-          placeholder="mohamadhasanobeydipoor@gmail.com"
-          required
-        />
-      </div>
+      <InputField
+        label={"نام و نام خانوادگی"}
+        type={"text"}
+        name={"name"}
+        placeholder={"مثال : محمد حسن عبیدی پور"}
+        required
+      />
+      <InputField
+        label={"پست الکترونیکی"}
+        type={"email"}
+        name={"email"}
+        placeholder={"mohamadhasanobeydipoor@gmail.com"}
+        required
+      />
       <div>
         <label htmlFor="textarea">توضیحات :</label>
         <textarea

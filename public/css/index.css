@@ -90,9 +90,9 @@ body {
 ::placeholder {
   @apply text-xs text-gray-400 font-light dark:text-gray-800;
 }
-label {
-  @apply text-sm cursor-pointer
+.label {
+  @apply text-sm cursor-pointer;
 }
 .section-style {
-  @apply rounded-xl primary-border p-4 dark:bg-primary-dark
+  @apply rounded-xl primary-border p-4 dark:bg-primary-dark;
 }

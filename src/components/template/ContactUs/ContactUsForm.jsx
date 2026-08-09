@@ -1,4 +1,6 @@
-const Form = () => {
+import InputField from "../../common/Input/InputField";
+
+const ContactUsForm = () => {
   return (
     <form className="max-w-150 p-4">
       <p className="text-style text-sm">
@@ -6,47 +8,36 @@ const Form = () => {
       </p>
       <div className="space-y-4 mt-6">
         <div className="flex flex-col xs:flex-row gap-x-2 gap-y-4">
-          <div>
-            <label htmlFor="name">نام و نام خانوادگی :</label>
-            <input
-              className="input-style mt-2"
-              id="name"
-              type="text"
-              placeholder="مثال : حسن عبیدی"
-              required
-            />
-          </div>
-          <div>
-            <label htmlFor="name">شماره موبایل :</label>
-            <input
-              className="input-style mt-2"
-              id="name"
-              type="text"
-              placeholder=" مثال : 09000000000"
-              required
-            />
-          </div>
-        </div>
-        <div>
-          <label htmlFor="name"> پست الکترونیکی :</label>
-          <input
-            className="input-style mt-2"
-            id="name"
-            type="email"
-            placeholder="mohamadhasanobeydipoor@gmail.com"
+          <InputField
+            label={"نام و نام خانوادگی"}
+            type={"text"}
+            name={"name"}
+            placeholder={"مثال : محمد حسن عبیدی پور"}
+            required
+          />
+          <InputField
+            label={"شماره موبایل"}
+            type={"text"}
+            name={"phoneNumber"}
+            maxLength={11}
+            placeholder={"مثال : 09000000000"}
             required
           />
         </div>
-        <div>
-          <label htmlFor="name"> موضوع :</label>
-          <input
-            className="input-style mt-2"
-            id="name"
-            type="text"
-            placeholder="مثال : مرجوع کردن محصول"
-            required
-          />
-        </div>
+        <InputField
+          label={"پست الکترونیکی"}
+          type={"email"}
+          name={"email"}
+          placeholder={"mohamadhasanobeydipoor@gmail.com"}
+          required
+        />
+        <InputField
+          label={"موضوع"}
+          type={"text"}
+          name={"title"}
+          placeholder={"مثال : مرجوع کردن محصول"}
+          required
+        />
         <div>
           <label htmlFor="textarea">توضیحات :</label>
           <textarea
@@ -73,4 +64,4 @@ const Form = () => {
   );
 };
 
-export default Form;
+export default ContactUsForm;

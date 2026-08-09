@@ -7,10 +7,12 @@ const GoToCommnets = () => {
   const location = useLocation();
   useEffect(() => {
     const hash = location.hash;
-    const element = document.querySelector(hash);
-    element.scrollIntoView({
-      behavior: "smooth",
-    });
+    if (hash) {
+      const element = document.querySelector(hash);
+      element.scrollIntoView({
+        behavior: "smooth",
+      });
+    }
   }, [location]);
   return (
     <Tooltip text={"رفتن به نظرات"}>

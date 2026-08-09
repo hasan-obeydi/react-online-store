@@ -1,5 +1,5 @@
 import SectionTitle from "../../components/common/SectionTitle/SectionTitle";
-import Form from "../../components/template/ContactUs/Form";
+import ContactUsForm from "../../components/template/ContactUs/ContactUsForm";
 
 const ContactUs = () => {
   return (
@@ -9,7 +9,7 @@ const ContactUs = () => {
         description={"از طریق فرم زیر میتوانید با ما تماس بگیرید."}
       />
       <div className="flex-between flex-col lg:flex-row box-style mt-8 mb-8 *:flex-1">
-        <Form />
+        <ContactUsForm />
         <div className="max-w-130 p-10">
           <img src={"/assets/contact-us.png"} />
         </div>
