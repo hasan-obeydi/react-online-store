@@ -9,7 +9,7 @@ const ProductPage = () => {
   return (
     <>
       <main className="w-[95%] mx-auto mt-10 grid grid-cols-8 gap-4">
-        <section className="col-span-8 lg:col-span-6 *:dark:bg-primary-dark">
+        <section className="col-span-8 lg:col-span-6 space-y-4">
           <HeroSection />
           <Description />
           <RelatedProducts />

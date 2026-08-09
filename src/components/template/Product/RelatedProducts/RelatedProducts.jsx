@@ -3,10 +3,12 @@ import SwiperProducts from "./Fragments/SwiperProdutcs";
 
 const RelatedProducts = () => {
   return (
-    <section className="box-style mt-8">
-      <BoxTitle title={"محصولات مرتبط"} />
-      <SwiperProducts />
-    </section>
+    <div className="pt-5" id="realted-products">
+      <section className="section-style">
+        <BoxTitle title={"محصولات مرتبط"} />
+        <SwiperProducts />
+      </section>
+    </div>
   );
 };
 

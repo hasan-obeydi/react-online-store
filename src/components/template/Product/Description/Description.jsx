@@ -4,10 +4,12 @@ import Text from "./Fragments/Text";
 
 const Description = () => {
   return (
-    <div className="box-style mt-8">
-      <BoxTitle title={"توضیحات محصول"} />
-      <Text />
-      <ReadAll />
+    <div className="pt-5">
+      <div className="section-style">
+        <BoxTitle title={"توضیحات محصول"} />
+        <Text />
+        <ReadAll />
+      </div>
     </div>
   );
 };

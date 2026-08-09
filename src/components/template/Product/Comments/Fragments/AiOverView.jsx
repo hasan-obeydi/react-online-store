@@ -13,7 +13,7 @@ const AiOverView = () => {
           <p className="text-xs text-style">تولید شده با هوش مصنوعی</p>
         </div>
       </div>
-      <div className="mt-4 p-4 bg-[#D1C4E9]/20 rounded-lg">
+      <div className="mt-4 p-4 bg-[#D1C4E9]/20 dark:bg-[#D1C4E9]/10 rounded-lg">
         <p>{LOREM_TEXT}</p>
       </div>
     </div>
