@@ -2,10 +2,11 @@ const InputField = ({
   label,
   value,
   type,
-  //   name,
   placeholder,
+  name,
   isRequired,
   maxLength,
+  onChange,
 }) => {
   const uniqueId = crypto.randomUUID();
   return (
@@ -16,9 +17,11 @@ const InputField = ({
       <input
         className="input-style mt-2"
         id={uniqueId}
+        onChange={onChange}
         maxLength={maxLength ?? null}
         type={type ?? "text"}
         value={value}
+        name={name}
         placeholder={placeholder ?? "لطفا این فیلد را تکمیل نمایید."}
         required={isRequired ?? true}
       />

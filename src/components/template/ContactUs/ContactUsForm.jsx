@@ -1,40 +1,59 @@
+import { useState } from "react";
 import InputField from "../../common/Input/InputField";
 
 const ContactUsForm = () => {
+  const [formData, setFormData] = useState({
+    name: "",
+    phone: "",
+    subject: "",
+    content: "",
+  });
+
+  const changeHandler = (e) => {
+    setFormData((prev) => ({ ...prev, [e.target.name]: e.target.value }));
+  };
+  const submitHandler = (e) => {
+    e.preventDefault();
+    setFormData({
+      name: "",
+      phone: "",
+      subject: "",
+      content: "",
+    });
+  };
   return (
-    <form className="max-w-150 p-4">
+    <form onSubmit={submitHandler} className="max-w-150 p-4">
       <p className="text-style text-sm">
         کاربر محترم, برای پاسخگویی بهتر لطفا تمامی فیلد های زیر را تکمیل کنید.
       </p>
       <div className="space-y-4 mt-6">
         <div className="flex flex-col xs:flex-row gap-x-2 gap-y-4">
           <InputField
+            value={formData.name}
             label={"نام و نام خانوادگی"}
+            onChange={changeHandler}
             type={"text"}
             name={"name"}
             placeholder={"مثال : محمد حسن عبیدی پور"}
             required
           />
           <InputField
+            value={formData.phone}
             label={"شماره موبایل"}
+            onChange={changeHandler}
             type={"text"}
-            name={"phoneNumber"}
+            name={"phone"}
             maxLength={11}
             placeholder={"مثال : 09000000000"}
             required
           />
         </div>
         <InputField
-          label={"پست الکترونیکی"}
-          type={"email"}
-          name={"email"}
-          placeholder={"mohamadhasanobeydipoor@gmail.com"}
-          required
-        />
-        <InputField
+          value={formData.subject}
           label={"موضوع"}
+          onChange={changeHandler}
           type={"text"}
-          name={"title"}
+          name={"subject"}
           placeholder={"مثال : مرجوع کردن محصول"}
           required
         />
@@ -42,7 +61,9 @@ const ContactUsForm = () => {
           <label htmlFor="textarea">توضیحات :</label>
           <textarea
             className="input-style mt-2 max-h-40 min-h-10"
-            name="description"
+            value={formData.content}
+            onChange={changeHandler}
+            name="content"
             id="textarea"
             placeholder="مثال : قصد مرجوع کردن محصول با شناسه #124667 را دارم."
             required
