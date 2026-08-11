@@ -96,3 +96,6 @@ body {
 .section-style {
   @apply rounded-xl primary-border p-4 dark:bg-primary-dark;
 }
+.disable {
+  @apply opacity-50 cursor-not-allowed hover:opacity-50 active:scale-100
+}

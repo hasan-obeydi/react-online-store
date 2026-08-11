@@ -7,7 +7,7 @@ const MiniProduct = () => {
         <img className="size-full object-cover" src={DEFAULT_PRODUCT_IMAGE} />
       </div>
       <h3 className="text-sm line-clamp-2 font-semibold">
-        لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم.
+        گوشی موبایل اپل مدل iPhone 17 Air
       </h3>
     </div>
   );

@@ -1,7 +1,13 @@
 import { useState } from "react";
 import InputField from "../../common/Input/InputField";
+import axios from "axios";
+import { toast } from "sonner";
+import clsx from "clsx";
+import contactUsSchema from "../../../validators/contact-us";
+import validate from "../../../validators";
 
 const ContactUsForm = () => {
+  const [isLoading, setIsLoading] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
     phone: "",
@@ -12,14 +18,41 @@ const ContactUsForm = () => {
   const changeHandler = (e) => {
     setFormData((prev) => ({ ...prev, [e.target.name]: e.target.value }));
   };
-  const submitHandler = (e) => {
-    e.preventDefault();
+  const clearInputs = () => {
     setFormData({
       name: "",
       phone: "",
       subject: "",
       content: "",
     });
+  };
+  const submitHandler = async (e) => {
+    e.preventDefault();
+    if (validate(contactUsSchema, formData)) {
+      setIsLoading(true);
+      const response = axios.post(
+        "https://shopino.iran.liara.run/v1/contact-us",
+        formData,
+      );
+      await toast.promise(response, {
+        loading: () => {
+          return "در حال ارسال پیام...";
+        },
+        success: () => {
+          clearInputs();
+          setIsLoading(false);
+          return "پیام شما با موفقیت ارسال شد.";
+        },
+        error: (error) => {
+          setIsLoading(false);
+          if (error.response?.status === 400) {
+            return "لطفا مقادیر را به درستی وارد کنید.";
+          } else {
+            return "پیام شما ارسال نشد.";
+          }
+        },
+      });
+    }
   };
   return (
     <form onSubmit={submitHandler} className="max-w-150 p-4">
@@ -72,13 +105,20 @@ const ContactUsForm = () => {
       </div>
       <div className="flex-itc gap-2 justify-end mt-6">
         <button
+          onClick={clearInputs}
           type="button"
-          className="border border-gray-400 rounded-lg py-2 px-4 cursor-pointer hover:opacity-80 duration-200"
+          className="border border-gray-400 rounded-lg py-2 px-4 cursor-pointer hover:opacity-80 duration-200 active:scale-90"
         >
           انصراف
         </button>
-        <button type="submit" className="primary-button px-6!">
-          ثبت و ارسال
+        <button
+          type="submit"
+          disabled={isLoading}
+          className={clsx("primary-button active:scale-90 px-6!", {
+            disable: isLoading === true,
+          })}
+        >
+          {isLoading ? "در حال ارسال..." : "ثبت و ارسال"}
         </button>
       </div>
     </form>
