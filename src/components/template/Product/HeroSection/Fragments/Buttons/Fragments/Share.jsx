@@ -15,7 +15,7 @@ const Share = () => {
     }, [1500]);
   };
   return (
-    <Tooltip text={isCopied ? "متن کپی شد !" : "اشتراک گذاری"}>
+    <Tooltip text={isCopied ? "لینک کپی شد !" : "اشتراک گذاری"}>
       <button
         onClick={copyUrl}
         className="size-9 primary-border rounded-lg flex-center cursor-pointer duration-200 *:duration-200 dark:hover:bg-gray-700 hover:bg-gray-200"

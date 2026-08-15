@@ -1,59 +1,16 @@
-import { useState } from "react";
-import InputField from "../../common/Input/InputField";
-import axios from "axios";
-import { toast } from "sonner";
 import clsx from "clsx";
-import contactUsSchema from "../../../validators/contact-us";
-import validate from "../../../validators";
+
+import useContactUs from "../../../lib/hooks/useContactUs";
+import InputField from "../../common/Input/InputField";
 
 const ContactUsForm = () => {
-  const [isLoading, setIsLoading] = useState(false);
-  const [formData, setFormData] = useState({
-    name: "",
-    phone: "",
-    subject: "",
-    content: "",
-  });
-
-  const changeHandler = (e) => {
-    setFormData((prev) => ({ ...prev, [e.target.name]: e.target.value }));
-  };
-  const clearInputs = () => {
-    setFormData({
+  const { formData, isLoading, changeHandler, submitHandler, clearInputs } =
+    useContactUs({
       name: "",
       phone: "",
       subject: "",
       content: "",
     });
-  };
-  const submitHandler = async (e) => {
-    e.preventDefault();
-    if (validate(contactUsSchema, formData)) {
-      setIsLoading(true);
-      const response = axios.post(
-        "https://shopino.iran.liara.run/v1/contact-us",
-        formData,
-      );
-      await toast.promise(response, {
-        loading: () => {
-          return "در حال ارسال پیام...";
-        },
-        success: () => {
-          clearInputs();
-          setIsLoading(false);
-          return "پیام شما با موفقیت ارسال شد.";
-        },
-        error: (error) => {
-          setIsLoading(false);
-          if (error.response?.status === 400) {
-            return "لطفا مقادیر را به درستی وارد کنید.";
-          } else {
-            return "پیام شما ارسال نشد.";
-          }
-        },
-      });
-    }
-  };
   return (
     <form onSubmit={submitHandler} className="max-w-150 p-4">
       <p className="text-style text-sm">
@@ -68,7 +25,6 @@ const ContactUsForm = () => {
             type={"text"}
             name={"name"}
             placeholder={"مثال : محمد حسن عبیدی پور"}
-            required
           />
           <InputField
             value={formData.phone}
@@ -78,7 +34,6 @@ const ContactUsForm = () => {
             name={"phone"}
             maxLength={11}
             placeholder={"مثال : 09000000000"}
-            required
           />
         </div>
         <InputField
@@ -88,7 +43,6 @@ const ContactUsForm = () => {
           type={"text"}
           name={"subject"}
           placeholder={"مثال : مرجوع کردن محصول"}
-          required
         />
         <div>
           <label htmlFor="textarea">توضیحات :</label>
@@ -99,7 +53,6 @@ const ContactUsForm = () => {
             name="content"
             id="textarea"
             placeholder="مثال : قصد مرجوع کردن محصول با شناسه #124667 را دارم."
-            required
           ></textarea>
         </div>
       </div>

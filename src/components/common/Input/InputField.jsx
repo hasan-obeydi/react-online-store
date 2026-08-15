@@ -23,7 +23,7 @@ const InputField = ({
         value={value}
         name={name}
         placeholder={placeholder ?? "لطفا این فیلد را تکمیل نمایید."}
-        required={isRequired ?? true}
+        required={isRequired ?? false}
       />
     </div>
   );
